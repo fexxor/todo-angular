@@ -1,0 +1,9 @@
+<div class="form-container">
+    <h2>Add Todo</h2>
+    <label>Title <span *ngIf="submitted && !todo.title?.trim()" class="error-message"> - The field is mandatory.</span></label>
+    <input [(ngModel)]="todo.title" placeholder="Give the todo a title.">
+    <label>Description</label>
+    <textarea [(ngModel)]="todo.description" rows="3" placeholder="Write a description for what to do."></textarea>
+    <app-priority-select [(priority)]="todo.priority" [displayErrorMessage]="submitted && !todo.priority"></app-priority-select>
+    <button (click)="saveTodo(todo)">Save</button>
+</div>

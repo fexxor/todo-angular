@@ -1,0 +1,10 @@
+@import '../../../styles.config.scss';
+
+:host {
+    display: block;
+}
+
+app-todo {
+    @include standard-box-shadow;
+    margin-bottom: 1rem;
+}

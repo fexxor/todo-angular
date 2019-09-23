@@ -1,0 +1,9 @@
+<div class="priority">
+    <label>Priority <span *ngIf="displayErrorMessage" class="error-message"> - The field is mandatory.</span></label>
+    <select [class]="priority" [ngModel]="priority" (ngModelChange)="changePriority($event)">
+        <option value="undefined" selected="selected" disabled="disabled">Choose priority</option> 
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+    </select>
+</div>

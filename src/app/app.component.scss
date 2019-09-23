@@ -1,0 +1,80 @@
+@import '../styles.config.scss';
+
+header {
+    background-color: $color1;
+    color: $text-color2;
+    font-weight: bolder;
+    padding: 1rem;
+    font-size: 2rem;
+
+    @include standard-box-shadow;
+
+    h1 {
+        margin-left: 2rem;
+    }
+    
+    @include screen-size(small) {
+        h1 {
+            margin-left: 0;
+        }
+    }
+
+    @include screen-size(medium) {
+        font-size: 2.5rem;
+    }
+
+    @include screen-size(large) {
+        font-size: 3rem;
+    }
+
+    @include standard-padding;
+}
+
+header {
+    margin-bottom: 2rem;
+
+    @include screen-size(small) {
+        margin-bottom: 1rem;
+    }
+}
+
+app-todo-form, app-todo-list {
+    margin:  0 1rem 1rem 1rem;
+}
+
+.app-container {
+
+    @include screen-size(medium) {
+        header {
+            margin-bottom: 2rem;
+        }
+
+        app-todo-form, app-todo-list {
+            margin: 0 2rem 2rem;
+        }
+    }
+
+    @include screen-size(large) {
+        display: flex;
+        flex-direction: row-reverse;
+
+        * {
+            flex: 1 1 auto;
+        }
+
+        header {
+            margin-bottom: 2rem;
+        }
+
+        app-todo-form {
+            margin-right: 2rem;
+        }
+        
+        app-todo-list {
+            margin: 0 2rem;
+        }
+    }
+
+  
+
+}

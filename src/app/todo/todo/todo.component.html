@@ -1,0 +1,8 @@
+<div class="todo">
+    <div>
+        <h2>{{todo.title}}</h2>
+        <div class="description" *ngIf="todo.description">{{todo.description}}</div>
+    </div>
+    <app-priority-select [priority]="todo.priority" (priorityChange)="editTodo(todo, $event)"></app-priority-select>
+    <button (click)="deleteTodo(todo)">×</button>
+</div>

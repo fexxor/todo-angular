@@ -1,0 +1,35 @@
+$color1: #39A2AE;
+$color2: #55DBCB;
+$color3: #75E4B3;
+$color4: #534b4f;
+
+$text-color1: #333;
+$text-color2: #fff;
+
+@mixin screen-size($size) {
+	@if $size == large {
+	  @media (min-width: 1250px) { @content; }
+	}
+	@else if $size == medium {
+	  @media (min-width: 601px) and (max-width: 1249px) { @content; }
+	}
+	@else if $size == small {
+	  @media (max-width: 600px)  { @content; }
+	}
+}
+
+@mixin standard-padding {
+	padding: 1rem;
+
+    @include screen-size(medium) {
+        padding: 1.5rem;
+    }
+
+    @include screen-size(large) {
+        padding: 2rem;
+    }
+}
+
+@mixin  standard-box-shadow {
+	box-shadow: 0 1rem 2rem rgba(black, .35);
+}

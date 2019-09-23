@@ -1,0 +1,45 @@
+@import '../../../styles.config.scss';
+
+:host {
+    display: block;
+}
+
+.todo {
+    background-color: $color3;
+    color: $text-color2;
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+
+    .content {
+        flex: 1 1 auto;
+    }
+
+    @include screen-size(small) {
+        flex-direction: column;
+    }
+
+    @include standard-padding;
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .description {
+        margin-bottom: 1rem;
+    }
+
+    button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: none;
+        font-size: 2rem;
+        border: none;
+        padding: 0.2rem .7rem;
+        color: $text-color2;
+        font-weight: normal;
+    }
+}
